@@ -19,7 +19,45 @@ xui.Class('App', 'xui.Module',{
         iniComponents : function(){
             // [[Code created by CrossUI RAD Studio
             var host=this, children=[], append=function(child){children.push(child.get(0));};
-
+            
+            append(
+                xui.create("xui.UI.Label")
+                .setHost(host,"xui_ui_label13")
+                .setLeft("14.476190476190476em")
+                .setTop("3.8095238095238093em")
+                .setWidth("26.057142857142857em")
+                .setHeight("3.5047619047619047em")
+                .setCaption("HI")
+                .setFontColor("#000080")
+                .setFontSize("40px")
+                .setFontFamily("comic sans MS")
+            );
+            
+            append(
+                xui.create("xui.UI.Button")
+                .setHost(host,"xui_ui_button14")
+                .setLeft("12.952380952380953em")
+                .setTop("13.714285714285714em")
+                .setCaption("PLAY")
+                .setFontColor("#8B0000")
+                .setFontFamily("<style> @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap'); </style>")
+                .onClick([
+                    {
+                        "desc" : "Action 1",
+                        "type" : "other",
+                        "target" : "url",
+                        "args" : [
+                            undefined,
+                            {
+                                "" : null
+                            }
+                        ],
+                        "method" : "mailTo",
+                        "event" : 1
+                    }
+                ])
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
